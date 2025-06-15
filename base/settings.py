@@ -129,4 +129,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
     'test-instance-cbb9bbd7f0f2bgaz.canadacentral-01.azurewebsites.net',
+    'https://test-instance-cbb9bbd7f0f2bgaz.canadacentral-01.azurewebsites.net',
 ]
