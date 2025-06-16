@@ -9,7 +9,7 @@ from msal import ConfidentialClientApplication
 
 # Azure AD App credentials
 CLIENT_ID = '9029fab8-1336-4460-920f-ecc3b2507a77'
-CLIENT_SECRET = '54888a2b-f940-4bcf-8c89-3849e3d90794'
+CLIENT_SECRET = 'V8W8Q~cNp30KZVGHHDqs3T1BI4zWRawucEovNbFo' '''a2fe5f35-d621-4a33-b86f-a95ec1b11d10'''
 TENANT_ID = 'fbcf15bd-a458-4753-9b69-8ac6cffa0a9e'
 
 AUTHORITY = f"https://login.microsoftonline.com/{TENANT_ID}"
@@ -27,6 +27,8 @@ def upload(request):
             client_credential=CLIENT_SECRET,
         )
         result = app.acquire_token_for_client(scopes=SCOPE)
+
+        print(result)
 
         if "access_token" in result:
             access_token = result["access_token"]
