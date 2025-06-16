@@ -46,6 +46,9 @@ def upload(request):
             else:
                 return HttpResponse(f"Failed to upload. {response.status_code} - {response.text}")
         else:
-            return HttpResponse("Failed to obtain access token.")
+            return HttpResponse(f"Failed to obtain access token. {result}")
 
     return render(request, 'upload.html')
+
+
+'''https://test-instance-cbb9bbd7f0f2bgaz.canadacentral-01.azurewebsites.net/upload/'''
